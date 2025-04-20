@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Young Serif';
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone100: hsl(30, 54%, 90%);
+    --stone150: hsl(30, 18%, 87%);
+    --stone600: hsl(30, 10%, 34%);
+    --stone900: hsl(24, 5%, 18%);
+    --brown800: hsl(14, 45%, 36%);
+    --rose800: hsl(332, 51%, 32%);
+    --rose50: hsl(330, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--stone100);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 30%;
+    max-width: 700px;
+    margin: 5rem auto;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+}
+
+.container img {
+    object-fit: cover;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 0.625rem;
+}
+
+hr {
+    border: 1px solid var(--stone100);
+}
+
+.recipe-brief {
+    margin: 1.25rem 0 1.5625rem;
+}
+
+.recipe-brief h1 {
+    font-family: 'Young Serif';
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.recipe-brief p {
+    font-family: 'Young Serif';
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin: 0.625rem 0 1.2rem;
+    color: var(--stone600);
+}
+
+.preparation-container {
+    background-color: var(--rose50);
+    padding: 0.9375rem;
+}
+
+.preparation-container h5 {
+    font-family: 'Young Serif';
+    font-weight: 600;
+    color: var(--rose800);
+}
+
+.preparation-container ul {
+    margin: 0.625rem 1.875rem 0.625rem;
+}
+
+.preparation-container li {
+    margin-bottom: 0.625rem;
+    font-size: 0.7rem;
+    font-family: 'Outfit';
+    color: var(--stone600);
+}
+
+.preparation-container li::marker {
+    color: var(--rose800);
+}
+
+.preparation-container span {
+    font-weight: bold;
+    margin: 0 0.3125rem 0 0.625rem;
+    color: var(--stone900);
+}
+
+.ingredients-container h3 {
+    font-family: 'Young Serif';
+    font-weight: 400;
+    margin-bottom: 0.625rem;
+    color: var(--brown800);
+}
+
+.ingredients-container ul {
+    margin: 0 0 1.875rem 1.875rem;
+}
+
+.ingredients-container li {
+    margin-bottom: 0.625rem;
+    font-size: 0.7rem;
+    font-family: 'Outift';
+    color: var(--stone600);
+}
+
+.ingredients-container li::marker {
+    color: var(--brown800);
+}
+
+.instructions-container h3 {
+    margin: 1.25rem 0 0.625rem;
+    font-family: 'Young Serif';
+    font-weight: 400;
+    color: var(--brown800);
+}
+
+.instructions-container ul {
+    list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.instructions-container li {
+    font-family: 'Outfit';
+    font-size: 0.7rem;
+    margin: 0 0 0.3125rem 1.25rem;
+    padding-left: 0.625rem;
+}
+
+.instructions-container li::marker {
+    color: var(--brown800);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.instructions-container span {
+    font-weight: bold;
+    margin-right: 0.3125rem;
+}
+
+.nutrition-container h3 {
+    font-family: 'Young Serif';
+    font-weight: 400;
+    color: var(--brown800);
+}
+
+#nutrition-description {
+    font-family: 'Outfit';
+    font-size: 0.7rem;
+    color: var(--stone600);
+    margin: 0.3125rem 0 0.625rem 0;
+}
+
+.nutritional-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.9375rem 0 0.625rem 0;
+}
+
+.nutrition-type {
+    font-family: 'Outfit';
+    color: var(--stone600);
+    font-size: 0.7rem;
+    margin-left: 1.875rem;
+}
+
+.nutrition-count {
+    font-family: 'Outfit';
+    color: var(--brown800);
+    margin-right: 11.25rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 0.75rem;
+        margin: 1.5rem auto;
+    }
+
+    .recipe-brief h1 {
+        font-size: 1.2rem;
+    }
+
+    .recipe-brief p {
+        font-size: 0.6rem;
+    }
+
+    .preparation-container li,
+    .ingredients-container li,
+    .instructions-container li,
+    #nutrition-description,
+    .nutrition-type {
+        font-size: 0.6rem;
+    }
+}
